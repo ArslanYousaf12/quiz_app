@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/app_bootstrap.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  final appBootstrap = AppBootstrap();
+  // * uncomment this to connect to the Firebase emulators
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  //TODO: await appBootstrap.setupEmulators();
+  //TODO:  Stripe setup
 
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+  // use the container above to create the root widget
+  final root = appBootstrap.createRootWidget();
+  // start the app
+  runApp(root);
 }

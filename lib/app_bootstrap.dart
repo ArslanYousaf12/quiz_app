@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:quiz_app/main.dart';
+import 'package:quiz_app/app.dart';
 
 class AppBootstrap {
   /// Create the root widget that should be passed to [runApp].
