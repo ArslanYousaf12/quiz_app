@@ -10,18 +10,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Widget? activeScreen;
-  @override
-  void initState() {
-    activeScreen = StartQuiz(
-      switchScreen: switchScreen,
-    );
-    super.initState();
-  }
+  var activeScreen = 'startQuiz';
 
+  @override
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionScreen();
+      activeScreen = 'questionScreen';
     });
   }
 
@@ -48,7 +42,10 @@ class _MyAppState extends State<MyApp> {
             foregroundColor: Colors.white, // foreground (text) color
           ),
           scaffoldBackgroundColor: Colors.deepPurpleAccent),
-      home: Scaffold(body: activeScreen),
+      home: Scaffold(
+          body: activeScreen == 'startQuiz'
+              ? StartQuiz(switchScreen: switchScreen)
+              : const QuestionScreen()),
     );
   }
 }
