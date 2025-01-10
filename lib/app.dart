@@ -21,6 +21,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    Widget ScreenWidget = StartQuiz(switchScreen: switchScreen);
+
+    if (activeScreen == 'questionScreen') {
+      ScreenWidget = const QuestionScreen();
+    }
+
     return MaterialApp(
       theme: ThemeData(
           // * Use this to toggle Material 3 (defaults to true since Flutter 3.16)
@@ -43,9 +49,8 @@ class _MyAppState extends State<MyApp> {
           ),
           scaffoldBackgroundColor: Colors.deepPurpleAccent),
       home: Scaffold(
-          body: activeScreen == 'startQuiz'
-              ? StartQuiz(switchScreen: switchScreen)
-              : const QuestionScreen()),
+        body: ScreenWidget,
+      ),
     );
   }
 }
