@@ -20,6 +20,7 @@ class StartQuiz extends StatelessWidget {
             Image.asset(
               'assets/images/quiz-logo.png',
               fit: BoxFit.cover,
+              color: const Color.fromARGB(150, 255, 255, 255),
             ),
             SizedBox(height: height / 1 * 0.1),
             const Text(
@@ -31,9 +32,12 @@ class StartQuiz extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {},
-              child: const Text('Start Quiz'),
+              icon: const Icon(Icons.arrow_right_alt),
+              label: const Text('Start Quiz'),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
             ),
           ],
         ),
