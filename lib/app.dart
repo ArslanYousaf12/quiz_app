@@ -39,8 +39,8 @@ class _MyAppState extends State<MyApp> {
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black, // background (button) color
-              foregroundColor: Colors.white, // foreground (text) color
+              backgroundColor: Colors.white, // background (button) color
+              foregroundColor: Colors.black, // foreground (text) color
             ),
           ),
           floatingActionButtonTheme: const FloatingActionButtonThemeData(
