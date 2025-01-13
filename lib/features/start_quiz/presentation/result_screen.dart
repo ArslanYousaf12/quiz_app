@@ -4,6 +4,8 @@ import 'package:quiz_app/features/start_quiz/data/questions.dart';
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.choosanAnswers});
   final List<String> choosanAnswers;
+
+  //TODO: Implement getsummary model instread of model
   List<Map<String, Object>> getsummary() {
     final List<Map<String, Object>> summary = [];
     for (var i = 0; i < choosanAnswers.length; i++) {

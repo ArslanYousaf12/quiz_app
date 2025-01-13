@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
   var activeScreen = 'startQuiz';
   List<String> choosanAnswers = [];
 
+//TODO: add statemangement solution instread of passing data through widget tree
   void switchScreen() {
     setState(() {
       activeScreen = 'questionScreen';
