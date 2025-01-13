@@ -10,9 +10,17 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var questionIndex = 0;
+
+  void _answerQuestion() {
+    setState(() {
+      questionIndex++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final question = questions[1];
+    final question = questions[questionIndex];
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -29,7 +37,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             const SizedBox(height: 20),
             ...question.shaffleOptions().map((answer) => AnswerButton(
                   text: answer,
-                  onPressed: () {},
+                  onPressed: _answerQuestion,
                 )),
           ],
         ),
