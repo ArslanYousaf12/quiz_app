@@ -7,7 +7,7 @@ void main() {
 
   //TODO: await appBootstrap.setupEmulators();
   //TODO:  Stripe setup
-
+//TODO:  await appBootstrap.setupStripe();
   // use the container above to create the root widget
   final root = appBootstrap.createRootWidget();
   // start the app
