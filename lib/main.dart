@@ -4,7 +4,7 @@ import 'package:quiz_app/app_bootstrap.dart';
 void main() {
   final appBootstrap = AppBootstrap();
   // * uncomment this to connect to the Firebase emulators
-
+//TODO: we have to add supabase
   //TODO: await appBootstrap.setupEmulators();
   //TODO:  Stripe setup
 //TODO:  await appBootstrap.setupStripe();
