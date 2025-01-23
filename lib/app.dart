@@ -22,11 +22,18 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  void restartQuiz() {
+    setState(() {
+      activeScreen = 'startQuiz';
+      choosanAnswers = [];
+    });
+  }
+
   void addAnswer(String answer) {
     setState(() {
       choosanAnswers.add(answer);
       if (choosanAnswers.length == questions.length) {
-        activeScreen = 'restartQuiz';
+        activeScreen = 'resultScreen';
         // choosanAnswers = [];
       }
     });
@@ -39,9 +46,10 @@ class _MyAppState extends State<MyApp> {
     if (activeScreen == 'questionScreen') {
       screenWidget = QuestionScreen(onPressedAnswer: addAnswer);
     }
-    if (activeScreen == 'restartQuiz') {
+    if (activeScreen == 'resultScreen') {
       screenWidget = ResultScreen(
         choosanAnswers: choosanAnswers,
+        restartQuiz: restartQuiz,
       );
     }
 
