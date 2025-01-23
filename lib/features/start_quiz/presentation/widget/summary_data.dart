@@ -10,15 +10,17 @@ class SummaryData extends StatelessWidget {
         return Row(
           children: [
             Text(((data['question_index'] as int) + 1).toString()),
-            Column(
-              children: [
-                Text(data['questions'].toString()),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(data['correct_answer'].toString()),
-                Text(data['choosan_answer'].toString()),
-              ],
+            Expanded(
+              child: Column(
+                children: [
+                  Text(data['questions'].toString()),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(data['correct_answer'].toString()),
+                  Text(data['choosan_answer'].toString()),
+                ],
+              ),
             ),
           ],
         );
