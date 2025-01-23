@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
       choosanAnswers.add(answer);
       if (choosanAnswers.length == questions.length) {
         activeScreen = 'restartQuiz';
-        choosanAnswers = [];
+        // choosanAnswers = [];
       }
     });
   }

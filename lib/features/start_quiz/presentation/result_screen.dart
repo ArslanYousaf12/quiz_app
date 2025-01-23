@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/features/start_quiz/data/questions.dart';
+import 'package:quiz_app/features/start_quiz/presentation/widget/summary_data.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.choosanAnswers});
@@ -28,14 +29,7 @@ class ResultScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Congratulations! You answer x out y',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
+              SummaryData(getsummary()),
               const SizedBox(
                 height: 30,
               ),
